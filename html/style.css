@@ -1,0 +1,155 @@
+body,
+html {
+  overflow: hidden;
+  background: #000;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+#bt-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#bigsquare {
+  background: black;
+  display: block;
+  position: relative;
+}
+
+.c {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background: white;
+  z-index: 1000;
+}
+
+#q-grid{
+  display: grid;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: red;
+  z-index: 0;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.q1{border-radius: 100% 0 0 0;}
+.q2{border-radius: 0 100% 0 0;}
+.q3{border-radius: 0 0 0 100%;}
+.q4{border-radius: 0 0 100% 0;}
+
+.q{
+  overflow: hidden;
+  position: relative;
+}
+
+.s{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: grey;
+  overflow: hidden;
+}
+
+.s1, .s3, .s5, .s7{
+  transform: rotate(-45deg);
+}
+
+.s2, .s4, .s6, .s8{
+  transform: rotate(45deg);
+}
+
+.s1,.s2 {transform-origin: bottom right;}
+.s3,.s4 {transform-origin: bottom left;}
+.s5,.s6 {transform-origin: top right;}
+.s7,.s8 {transform-origin: top left;}
+
+.am{
+  position: absolute;
+  width: 200%;
+  height: 200%;
+}
+
+.am2{right: 0%;}
+.am3{bottom: 0%;}
+.am4{right: 0%; bottom: 0%;}
+
+
+.oCircle{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: blue;
+  z-index: 10;
+}
+
+.ACircle{
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: green;
+  z-index: 20;
+}
+
+.BCircle{
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: orange;
+  z-index: 30;
+}
+
+.oCircle.active, .ACircle.active, .BCircle.active, .c.active{
+  background: purple;
+}
+
+img{
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  z-index: 2000;
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  -webkit-opacity: 0.3;
+}
